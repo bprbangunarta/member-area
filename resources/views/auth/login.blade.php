@@ -3,6 +3,7 @@
 <html lang="en">
 
 <head>
+	<title>Log In | {{ config('app.name') }}</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="icon" href="{{ asset('assets/images/favicon-32x32.png') }}" type="image/png" />
@@ -13,10 +14,9 @@
 	<script src="{{ asset('assets/js/pace.min.js') }}"></script>
 	<link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet">
 	<link href="{{ asset('assets/css/bootstrap-extended.css') }}" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 	<link href="{{ asset('assets/css/app.css') }}" rel="stylesheet">
 	<link href="{{ asset('assets/css/icons.css') }}" rel="stylesheet">
-	<title>Log In | {{ config('app.name') }}</title>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 </head>
 
 <body>
