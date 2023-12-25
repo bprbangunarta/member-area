@@ -6,7 +6,7 @@
         <div class="page-content">
 
             <div class="row">
-                <div class="col-12 col-lg-4">
+                <div class="col-12 col-lg-6">
                     <div class="card radius-10">
                         <div class="card-body">
 
@@ -56,12 +56,20 @@
 
                                 @if (Laravel\Fortify\Features::enabled(Laravel\Fortify\Features::emailVerification()) && ! $user->hasVerifiedEmail())
                                     <div class="col-12">
-                                        <div class="text-center ">
+                                        <div>
                                             <p class="mb-0">
                                                 {{ __('Your email address is unverified.') }}
                                                 <a href="{{ route('verification.notice') }}" class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                                                     {{ __('Click here to re-send the verification email.') }}
                                                 </a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                @else
+                                    <div class="col-12">
+                                        <div>
+                                            <p class="mb-0">
+                                                If you want to change your email, make sure the email is active for verification.
                                             </p>
                                         </div>
                                     </div>
@@ -71,7 +79,7 @@
                     </div>
                 </div>
 
-                <div class="col-12 col-lg-8">
+                <div class="col-12 col-lg-6">
                     <div class="card radius-10">
                         <div class="card-body">
 
@@ -113,6 +121,14 @@
                                 <div class="col-12">
                                     <div class="d-grid">
                                         <button type="submit" class="btn btn-primary">Save Changes</button>
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div>
+                                        <p class="mb-0">
+                                            Make sure the password is correct, the new and confirmation password is the same.
+                                        </p>
                                     </div>
                                 </div>
                             </form>
