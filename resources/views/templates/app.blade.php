@@ -11,7 +11,6 @@
         <div class="sidebar-wrapper" data-simplebar="true">
             <div class="sidebar-header">
                 <div>
-                    {{-- <img src="https://zulfame.id/favicon.png" class="logo-icon" alt="logo icon" style="width:20px;"> --}}
                     <img src="https://zulfame.id/wp-content/uploads/2023/12/logo-dark.png" class="logo-icon"
                         alt="logo icon" style="width:120px;">
                 </div>
