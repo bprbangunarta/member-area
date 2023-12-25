@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Log In | {{ config('app.name') }}</title>
+    <title>Sign In | {{ config('app.name') }}</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="https://zulfame.id/favicon.png" type="image/png" />
@@ -70,7 +70,7 @@
                                             <div class="col-12">
                                                 <div class="d-grid">
                                                     <button type="submit" class="btn btn-primary"><i
-                                                            class="bx bxs-lock-open"></i>Log In</button>
+                                                            class="bx bxs-lock-open"></i>Sign In</button>
                                                 </div>
                                             </div>
 
