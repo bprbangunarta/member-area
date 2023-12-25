@@ -44,7 +44,7 @@
     <!--end wrapper-->
 
     <!--start switcher-->
-    <div class="switcher-wrapper">
+    {{-- <div class="switcher-wrapper">
         <div class="switcher-btn"> <i class='bx bx-cog bx-spin'></i>
         </div>
         <div class="switcher-body">
@@ -137,7 +137,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
     <!--end switcher-->
 
     @include('templates.footer')
