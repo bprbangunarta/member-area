@@ -141,6 +141,8 @@
     <!--end switcher-->
 
     @include('templates.footer')
+
+    @stack('myscript')
 </body>
 
 </html>

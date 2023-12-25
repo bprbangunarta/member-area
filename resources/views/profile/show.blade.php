@@ -88,35 +88,26 @@
 
                                 <div class="col-sm-12">
                                     <label for="current_password" class="form-label">Current Password</label>
-                                    <input type="password" class="form-control @error('current_password') is-invalid @enderror" name="current_password" id="current_password" value="{{ old('current_password') }}" placeholder="********" required>
-
-                                    @error('current_password')
-                                        <div id="validationServer03Feedback" class="invalid-feedback">
-                                            {{ $message }}
-                                        </div>
-                                    @enderror
+                                    <div class="input-group" id="show_hide_current_password">
+                                        <input type="password" class="form-control" name="current_password" id="current_password" value="{{ old('current_password') }}" placeholder="********" required>
+                                        <a href="javascript:;" class="input-group-text bg-transparent toggle-password" data-target="current_password"><i class="bx bx-hide"></i></a>
+                                    </div>
                                 </div>
-
+                                
                                 <div class="col-sm-12">
                                     <label for="password" class="form-label">New Password</label>
-                                    <input type="password" class="form-control @error('password') is-invalid @enderror" name="password" id="password" value="{{ old('password') }}" placeholder="********" required>
-
-                                    @error('password')
-                                        <div id="validationServer03Feedback" class="invalid-feedback">
-                                            {{ $message }}
-                                        </div>
-                                    @enderror
+                                    <div class="input-group" id="show_hide_password">
+                                        <input type="password" class="form-control" name="password" id="password" value="{{ old('password') }}" placeholder="********" required>
+                                        <a href="javascript:;" class="input-group-text bg-transparent toggle-password" data-target="password"><i class="bx bx-hide"></i></a>
+                                    </div>
                                 </div>
-
+                                
                                 <div class="col-sm-12">
                                     <label for="password_confirmation" class="form-label">Confirm Password</label>
-                                    <input type="password" class="form-control @error('password_confirmation') is-invalid @enderror" name="password_confirmation" id="password_confirmation" value="{{ old('password_confirmation') }}" placeholder="********" required>
-
-                                    @error('password_confirmation')
-                                        <div id="validationServer03Feedback" class="invalid-feedback">
-                                            {{ $message }}
-                                        </div>
-                                    @enderror
+                                    <div class="input-group" id="show_hide_password_confirmation">
+                                        <input type="password" class="form-control" name="password_confirmation" id="password_confirmation" value="{{ old('password_confirmation') }}" placeholder="********" required>
+                                        <a href="javascript:;" class="input-group-text bg-transparent toggle-password" data-target="password_confirmation"><i class="bx bx-hide"></i></a>
+                                    </div>
                                 </div>
 
                                 <div class="col-12">
@@ -132,3 +123,26 @@
         </div>
     </div>
 @endsection
+
+@push('myscript')
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const togglePasswordButtons = document.querySelectorAll('.toggle-password');
+
+            togglePasswordButtons.forEach(function (button) {
+                button.addEventListener('click', function () {
+                    const targetId = button.getAttribute('data-target');
+                    const targetInput = document.getElementById(targetId);
+
+                    if (targetInput.type === 'password') {
+                        targetInput.type = 'text';
+                        button.innerHTML = '<i class="bx bx-show"></i>';
+                    } else {
+                        targetInput.type = 'password';
+                        button.innerHTML = '<i class="bx bx-hide"></i>';
+                    }
+                });
+            });
+        });
+    </script>
+@endpush
