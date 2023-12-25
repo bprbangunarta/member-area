@@ -18,18 +18,15 @@
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end">
                             <li>
-                                <a class="dropdown-item" href="javascript:;"><i
-                                        class="bx bx-user"></i><span>Profile</span></a>
+                                <a class="dropdown-item" href="user/profile"><i class="bx bx-user"></i><span>Profile</span></a>
                             </li>
 
                             <li>
-                                <a class="dropdown-item" href="javascript:;"><i
-                                        class='bx bx-dollar-circle'></i><span>Balance</span></a>
+                                <a class="dropdown-item" href="3"><i class='bx bx-dollar-circle'></i><span>Balance</span></a>
                             </li>
 
                             <li>
-                                <a class="dropdown-item" href="javascript:;"><i
-                                        class='bx bx-download'></i><span>Downloads</span></a>
+                                <a class="dropdown-item" href="#"><i class='bx bx-download'></i><span>Downloads</span></a>
                             </li>
 
                             <li>
@@ -38,9 +35,9 @@
                             <li>
                                 <form method="POST" action="{{ route('logout') }}">
                                     @csrf
-                                    <a class="dropdown-item"
-                                        onclick="event.preventDefault(); this.closest('form').submit();"><i
-                                            class='bx bx-log-out-circle'></i><span>Logout</span></a>
+                                    <a class="dropdown-item" onclick="event.preventDefault(); this.closest('form').submit();">
+                                        <i class='bx bx-log-out-circle'></i><span>Logout</span>
+                                    </a>
                                 </form>
                             </li>
                         </ul>
