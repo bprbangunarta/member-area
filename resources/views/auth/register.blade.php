@@ -39,7 +39,7 @@
 
                                             <div class="col-12">
                                                 <label for="name" class="form-label">Full Name</label>
-                                                <input type="text" class="form-control @error('name') is-invalid @enderror" name="name" id="name" value="{{ old('name') }}" placeholder="Full Name">
+                                                <input type="text" class="form-control @error('name') is-invalid @enderror" name="name" id="name" value="{{ old('name') }}" placeholder="Albert Einstein" required>
 
                                                 @error('name')
                                                     <div id="validationServer03Feedback" class="invalid-feedback">
@@ -49,19 +49,8 @@
                                             </div>
 
                                             <div class="col-12">
-                                                <label for="email" class="form-label">Email</label>
-                                                <input type="email" class="form-control @error('email') is-invalid @enderror" name="email" id="email" value="{{ old('email') }}" placeholder="Email Address">
-
-                                                @error('email')
-                                                    <div id="validationServer03Feedback" class="invalid-feedback">
-                                                        {{ $message }}
-                                                    </div>
-                                                @enderror
-                                            </div>
-
-                                            <div class="col-12">
                                                 <label for="username" class="form-label">Username</label>
-                                                <input type="text" class="form-control @error('username') is-invalid @enderror" name="username" id="username" value="{{ old('username') }}" placeholder="Username">
+                                                <input type="text" class="form-control @error('username') is-invalid @enderror" name="username" id="username" value="{{ old('username') }}" placeholder="einstein" required>
 
                                                 @error('username')
                                                     <div id="validationServer03Feedback" class="invalid-feedback">
@@ -72,7 +61,9 @@
 
                                             <div class="col-12">
                                                 <label for="phone" class="form-label">Phone Number</label>
-                                                <input type="text" class="form-control @error('phone') is-invalid @enderror" name="phone" id="phone" value="{{ old('phone') }}" placeholder="62823XXXX">
+                                                <div class="input-group mb-3"> <span class="input-group-text" id="basic-addon1">62</span>
+                                                    <input type="number" class="form-control  @error('phone') is-invalid @enderror" name="phone" id="phone" value="{{ old('phone') }}" placeholder="82320099971" required>
+                                                </div>
 
                                                 @error('phone')
                                                     <div id="validationServer03Feedback" class="invalid-feedback">
@@ -81,9 +72,20 @@
                                                 @enderror
                                             </div>
 
+                                            <div class="col-12" style="margin-top:-1px;">
+                                                <label for="email" class="form-label">Email Address</label>
+                                                <input type="email" class="form-control @error('email') is-invalid @enderror" name="email" id="email" value="{{ old('email') }}" placeholder="einstein@gmail.com" required>
+
+                                                @error('email')
+                                                    <div id="validationServer03Feedback" class="invalid-feedback">
+                                                        {{ $message }}
+                                                    </div>
+                                                @enderror
+                                            </div>
+
                                             <div class="col-sm-6">
                                                 <label for="password" class="form-label">Password</label>
-                                                <input type="password" class="form-control @error('password') is-invalid @enderror" name="password" id="password" value="{{ old('password') }}" placeholder="Enter Password">
+                                                <input type="password" class="form-control @error('password') is-invalid @enderror" name="password" id="password" value="{{ old('password') }}" placeholder="********" required>
 
                                                 @error('password')
                                                     <div id="validationServer03Feedback" class="invalid-feedback">
@@ -94,7 +96,7 @@
 
                                             <div class="col-sm-6">
                                                 <label for="password_confirmation" class="form-label">Confirm Password</label>
-                                                <input type="password" class="form-control @error('password_confirmation') is-invalid @enderror" name="password_confirmation" id="password_confirmation" value="{{ old('password_confirmation') }}" placeholder="Enter Password">
+                                                <input type="password" class="form-control @error('password_confirmation') is-invalid @enderror" name="password_confirmation" id="password_confirmation" value="{{ old('password_confirmation') }}" placeholder="********" required>
 
                                                 @error('password_confirmation')
                                                     <div id="validationServer03Feedback" class="invalid-feedback">
