@@ -25,8 +25,7 @@
                 <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-3">
                     <div class="col mx-auto">
                         <div class="mb-4 text-center">
-                            <img src="https://zulfame.id/wp-content/uploads/2023/12/logo-dark.png" width="180"
-                                alt="" />
+                            <img src="https://zulfame.id/wp-content/uploads/2023/12/logo-dark.png" width="180" alt="" />
                         </div>
                         <div class="card">
                             <div class="card-body">
@@ -39,27 +38,23 @@
 
                                             <div class="col-12">
                                                 <label for="auth" class="form-label">Email or Username</label>
-                                                <input type="text"
-                                                    class="form-control @error('auth') is-invalid @enderror"
-                                                    name="auth" id="auth" value="{{ old('auth') }}"
-                                                    placeholder="Email or Username">
+                                                <input type="text" class="form-control @error('auth') is-invalid @enderror" name="auth" id="auth" value="{{ old('auth') }}" placeholder="Email or Username">
 
                                                 @error('auth')
                                                     <div id="validationServer03Feedback" class="invalid-feedback">
-                                                        {{ $message }}</div>
+                                                        {{ $message }}
+                                                    </div>
                                                 @enderror
                                             </div>
 
                                             <div class="col-12">
                                                 <label for="password" class="form-label">Enter Password</label>
-                                                <input type="password"
-                                                    class="form-control @error('password') is-invalid @enderror"
-                                                    name="password" id="password" value="{{ old('password') }}"
-                                                    placeholder="Enter Password">
+                                                <input type="password" class="form-control @error('password') is-invalid @enderror" name="password" id="password" value="{{ old('password') }}" placeholder="Enter Password">
 
                                                 @error('password')
                                                     <div id="validationServer03Feedback" class="invalid-feedback">
-                                                        {{ $message }}</div>
+                                                        {{ $message }}
+                                                    </div>
                                                 @enderror
                                             </div>
 
@@ -69,15 +64,16 @@
 
                                             <div class="col-12">
                                                 <div class="d-grid">
-                                                    <button type="submit" class="btn btn-primary"><i
-                                                            class="bx bxs-lock-open"></i>Sign In</button>
+                                                    <button type="submit" class="btn btn-primary">
+                                                        <i class="bx bxs-lock-open"></i>Sign In
+                                                    </button>
                                                 </div>
                                             </div>
 
                                             <div class="col-12">
                                                 <div class="text-center ">
-                                                    <p class="mb-0">Don't have an account yet? <a
-                                                            href="/register">Sign up here</a>
+                                                    <p class="mb-0">Don't have an account yet? 
+                                                        <a href="/register">Sign up here</a>
                                                     </p>
                                                 </div>
                                             </div>
